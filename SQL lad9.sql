@@ -78,7 +78,3 @@ ADD CONSTRAINT DienThoai CHECK(DienThoai LIKE '0%')
 CREATE INDEX ProductName ON DanhSachSP(TenSP)
 CREATE INDEX Sta ON DanhSachSP(MoTaSP)
 
-CREATE VIEW View_SanPham AS 
-SELECT TenSP,GiaBan FROM DanhSachSP
-CREATE VIEW View_SanPham_Hang AS 
-SELECT DanhSachSP.TenSP,HangSP.TenHang FROM DanhSachSP INNER JOIN HangSP ON DanhSachSP.IDHang = HangSP.IDHang
